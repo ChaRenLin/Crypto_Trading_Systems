@@ -1,0 +1,28 @@
+<!-- src/main/resources/templates/transaction-history.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Transaction History</title>
+</head>
+<body>
+    <h1>Transaction History</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Symbol</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Timestamp</th>
+        </tr>
+        <tr th:each="transaction : ${transactionsPO}">
+            <td th:text="${transaction.id}"></td>
+            <td th:text="${transaction.symbol}"></td>
+            <td th:text="${transaction.type}"></td>
+            <td th:text="${transaction.price}"></td>
+            <td th:text="${transaction.amount}"></td>
+            <td th:text="${transaction.timestamp}"></td>
+        </tr>
+    </table>
+</body>
+</html>
