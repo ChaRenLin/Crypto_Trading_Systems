@@ -14,8 +14,5 @@ public class UserPO {
     private Long id;
     private String username;
     private Double balance;
-    
-   
 
-    
 }
